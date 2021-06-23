@@ -105,7 +105,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
         pantalla.setFont(new java.awt.Font("Century Gothic", 1, 35)); // NOI18N
         pantalla.setForeground(new java.awt.Color(0, 0, 0));
         pantalla.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 220, 69));
+        getContentPane().add(pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 270, 69));
 
         btn1.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btn1.setText("1");
