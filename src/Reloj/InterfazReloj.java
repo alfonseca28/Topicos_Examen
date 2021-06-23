@@ -66,12 +66,15 @@ public class InterfazReloj extends javax.swing.JFrame implements Runnable {
         jlbreloj = new javax.swing.JLabel();
         btnsalir = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbreloj.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 35)); // NOI18N
         jlbreloj.setForeground(new java.awt.Color(0, 0, 0));
         jlbreloj.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        getContentPane().add(jlbreloj, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 225, 70));
 
         btnsalir.setText("Salir");
         btnsalir.addActionListener(new java.awt.event.ActionListener() {
@@ -79,36 +82,15 @@ public class InterfazReloj extends javax.swing.JFrame implements Runnable {
                 btnsalirActionPerformed(evt);
             }
         });
+        getContentPane().add(btnsalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 61, -1));
 
         jLabel2.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 35)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 88, 68));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jlbreloj, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jlbreloj, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnsalir)
-                        .addGap(46, 46, 46)))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo.png"))); // NOI18N
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 427, 120));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -154,6 +136,7 @@ public class InterfazReloj extends javax.swing.JFrame implements Runnable {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnsalir;
+    private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jlbreloj;
     // End of variables declaration//GEN-END:variables

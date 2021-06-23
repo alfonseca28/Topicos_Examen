@@ -22,15 +22,15 @@ public class InterfazConvertidor extends javax.swing.JFrame {
     public void kilometros() {
         if (km) {
             slmillas.setValue((int) (float) (this.slkilometros.getValue() * 0.621371));
-            numkm.setText(Float.valueOf(this.slkilometros.getValue()) + " km/h");
         }
+        numkm.setText(Float.valueOf(this.slkilometros.getValue()) + " km/h");
     }
 
     public void millas() {
         if (mp) {
             slkilometros.setValue((int) (float) (this.slmillas.getValue() * 1.60934));
-            nummill.setText(Float.valueOf(this.slmillas.getValue()) + " mph");
         }
+        nummill.setText(Float.valueOf(this.slmillas.getValue()) + " mph");
     }
 
     /**
@@ -47,11 +47,14 @@ public class InterfazConvertidor extends javax.swing.JFrame {
         btnsalir = new javax.swing.JButton();
         jlbkilometros = new javax.swing.JLabel();
         jlbmillas = new javax.swing.JLabel();
+        Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         numkm.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         numkm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(numkm, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 80, 40));
 
         slkilometros.setMaximum(500);
         slkilometros.setValue(0);
@@ -65,9 +68,11 @@ public class InterfazConvertidor extends javax.swing.JFrame {
                 slkilometrosMouseEntered(evt);
             }
         });
+        getContentPane().add(slkilometros, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 264, -1));
 
         nummill.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         nummill.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(nummill, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 80, 40));
 
         slmillas.setMaximum(500);
         slmillas.setValue(0);
@@ -81,6 +86,7 @@ public class InterfazConvertidor extends javax.swing.JFrame {
                 slmillasMouseEntered(evt);
             }
         });
+        getContentPane().add(slmillas, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 264, -1));
 
         btnsalir.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnsalir.setText("Salir");
@@ -89,57 +95,18 @@ public class InterfazConvertidor extends javax.swing.JFrame {
                 btnsalirActionPerformed(evt);
             }
         });
+        getContentPane().add(btnsalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 66, -1));
 
         jlbkilometros.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jlbkilometros.setText("Kilómetros");
+        getContentPane().add(jlbkilometros, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jlbmillas.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jlbmillas.setText("Millas");
+        getContentPane().add(jlbmillas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlbmillas)
-                            .addComponent(jlbkilometros)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(slkilometros, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
-                                .addComponent(slmillas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(numkm, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nummill, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(69, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jlbkilometros)
-                .addGap(19, 19, 19)
-                .addComponent(slkilometros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(numkm, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jlbmillas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(slmillas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(nummill, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(btnsalir)
-                .addGap(15, 15, 15))
-        );
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo.png"))); // NOI18N
+        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 320));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -203,6 +170,7 @@ public class InterfazConvertidor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fondo;
     private javax.swing.JButton btnsalir;
     private javax.swing.JLabel jlbkilometros;
     private javax.swing.JLabel jlbmillas;

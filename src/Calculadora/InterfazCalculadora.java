@@ -96,7 +96,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
         btn0 = new javax.swing.JButton();
         btnigual = new javax.swing.JButton();
         btnborrar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -114,7 +114,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btn1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 60, 59));
+        getContentPane().add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 60, 59));
 
         btn3.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btn3.setText("3");
@@ -123,7 +123,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btn3ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 60, 59));
+        getContentPane().add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, 60, 59));
 
         btnsuma.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btnsuma.setText("+");
@@ -132,7 +132,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btnsumaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnsuma, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 60, 59));
+        getContentPane().add(btnsuma, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 60, 59));
 
         btn2.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btn2.setText("2");
@@ -141,7 +141,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btn2ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 60, 59));
+        getContentPane().add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 60, 59));
 
         btnresta.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btnresta.setText("-");
@@ -150,7 +150,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btnrestaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnresta, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 60, 59));
+        getContentPane().add(btnresta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 60, 59));
 
         btn4.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btn4.setText("4");
@@ -159,7 +159,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btn4ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 60, 59));
+        getContentPane().add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 60, 59));
 
         btn5.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btn5.setText("5");
@@ -168,7 +168,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btn5ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 60, 59));
+        getContentPane().add(btn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 60, 59));
 
         btn6.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btn6.setText("6");
@@ -177,7 +177,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btn6ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 60, 59));
+        getContentPane().add(btn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 60, 59));
 
         btnmultiplicacion.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btnmultiplicacion.setText("x");
@@ -186,7 +186,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btnmultiplicacionActionPerformed(evt);
             }
         });
-        getContentPane().add(btnmultiplicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 60, 59));
+        getContentPane().add(btnmultiplicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 60, 59));
 
         btn7.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btn7.setText("7");
@@ -195,7 +195,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btn7ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 60, 59));
+        getContentPane().add(btn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 60, 59));
 
         btn8.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btn8.setText("8");
@@ -204,7 +204,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btn8ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 60, 59));
+        getContentPane().add(btn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 60, 59));
 
         btn9.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btn9.setText("9");
@@ -213,7 +213,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btn9ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 60, 59));
+        getContentPane().add(btn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 60, 59));
 
         btndivision.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btndivision.setText("÷");
@@ -222,7 +222,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btndivisionActionPerformed(evt);
             }
         });
-        getContentPane().add(btndivision, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 60, 59));
+        getContentPane().add(btndivision, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 60, 59));
 
         btnpunto.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btnpunto.setText(".");
@@ -231,7 +231,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btnpuntoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnpunto, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 60, 59));
+        getContentPane().add(btnpunto, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 60, 59));
 
         btn0.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btn0.setText("0");
@@ -240,7 +240,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btn0ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn0, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 60, 59));
+        getContentPane().add(btn0, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 60, 59));
 
         btnigual.setFont(new java.awt.Font("Century Gothic", 1, 25)); // NOI18N
         btnigual.setText("=");
@@ -249,7 +249,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btnigualActionPerformed(evt);
             }
         });
-        getContentPane().add(btnigual, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, 80, 50));
+        getContentPane().add(btnigual, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 80, 50));
 
         btnborrar.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
         btnborrar.setText("CE");
@@ -258,8 +258,10 @@ public class InterfazCalculadora extends javax.swing.JFrame {
                 btnborrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 60, 59));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 440));
+        getContentPane().add(btnborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 60, 59));
+
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo.png"))); // NOI18N
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -386,7 +388,7 @@ public class InterfazCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton btnpunto;
     private javax.swing.JButton btnresta;
     private javax.swing.JButton btnsuma;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel fondo;
     private javax.swing.JLabel pantalla;
     // End of variables declaration//GEN-END:variables
 }
