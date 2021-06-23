@@ -139,7 +139,4 @@ public class InterfazReloj extends javax.swing.JFrame implements Runnable {
     private javax.swing.JButton btnsalir;
     private javax.swing.JLabel jlbreloj;
     // End of variables declaration//GEN-END:variables
-
-    private void inciar() {
-    }
 }
