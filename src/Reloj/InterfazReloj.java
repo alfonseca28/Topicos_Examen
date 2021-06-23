@@ -35,9 +35,16 @@ public class InterfazReloj extends javax.swing.JFrame implements Runnable {
             int min = reloj.get(Calendar.MINUTE);
             int seg = reloj.get(Calendar.SECOND);
 
-            String horas = Integer.toString(hor);
+            String horas = Integer.toString(hor - 12);
             String minutos = Integer.toString(min);
             String segundos = Integer.toString(seg);
+
+            Calendar now = Calendar.getInstance();
+            if (now.get(Calendar.AM_PM) == Calendar.AM) {
+                jLabel2.setText("AM");
+            } else {
+                jLabel2.setText("PM");
+            }
 
             jlbreloj.setText(horas + " : " + minutos + " : " + segundos);
         }
@@ -59,11 +66,13 @@ public class InterfazReloj extends javax.swing.JFrame implements Runnable {
 
         jlbreloj = new javax.swing.JLabel();
         btnsalir = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jlbreloj.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 35)); // NOI18N
         jlbreloj.setForeground(new java.awt.Color(0, 0, 0));
+        jlbreloj.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
 
         btnsalir.setText("Salir");
         btnsalir.addActionListener(new java.awt.event.ActionListener() {
@@ -72,14 +81,20 @@ public class InterfazReloj extends javax.swing.JFrame implements Runnable {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 35)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(52, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jlbreloj, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
         );
@@ -87,10 +102,13 @@ public class InterfazReloj extends javax.swing.JFrame implements Runnable {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jlbreloj, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnsalir))
-                .addContainerGap(19, Short.MAX_VALUE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnsalir)
+                        .addGap(46, 46, 46)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();
@@ -137,6 +155,7 @@ public class InterfazReloj extends javax.swing.JFrame implements Runnable {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnsalir;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jlbreloj;
     // End of variables declaration//GEN-END:variables
 }
