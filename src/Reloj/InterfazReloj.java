@@ -45,7 +45,6 @@ public class InterfazReloj extends javax.swing.JFrame implements Runnable {
             } else {
                 jLabel2.setText("PM");
             }
-
             jlbreloj.setText(horas + " : " + minutos + " : " + segundos);
         }
     }

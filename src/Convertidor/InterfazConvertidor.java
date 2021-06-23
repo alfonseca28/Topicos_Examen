@@ -11,15 +11,26 @@ package Convertidor;
  */
 public class InterfazConvertidor extends javax.swing.JFrame {
 
-    boolean km = false;
-    boolean mp = false;
-
-    /**
-     * Creates new form InterfazConvertidor
-     */
     public InterfazConvertidor() {
         initComponents();
         setLocationRelativeTo(null);
+    }
+
+    boolean km = false;
+    boolean mp = false;
+
+    public void kilometros() {
+        if (km) {
+            slmillas.setValue((int) (float) (this.slkilometros.getValue() * 0.621371));
+            numkm.setText(Float.valueOf(this.slkilometros.getValue()) + " km/h");
+        }
+    }
+
+    public void millas() {
+        if (mp) {
+            slkilometros.setValue((int) (float) (this.slmillas.getValue() * 1.60934));
+            nummill.setText(Float.valueOf(this.slmillas.getValue()) + " mph");
+        }
     }
 
     /**
@@ -30,60 +41,60 @@ public class InterfazConvertidor extends javax.swing.JFrame {
     private void initComponents() {
 
         numkm = new javax.swing.JLabel();
-        jSlider1 = new javax.swing.JSlider();
+        slkilometros = new javax.swing.JSlider();
         nummill = new javax.swing.JLabel();
-        jSlider2 = new javax.swing.JSlider();
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        slmillas = new javax.swing.JSlider();
+        btnsalir = new javax.swing.JButton();
+        jlbkilometros = new javax.swing.JLabel();
+        jlbmillas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         numkm.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         numkm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        jSlider1.setMaximum(500);
-        jSlider1.setValue(0);
-        jSlider1.addChangeListener(new javax.swing.event.ChangeListener() {
+        slkilometros.setMaximum(500);
+        slkilometros.setValue(0);
+        slkilometros.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jSlider1StateChanged(evt);
+                slkilometrosStateChanged(evt);
             }
         });
-        jSlider1.addMouseListener(new java.awt.event.MouseAdapter() {
+        slkilometros.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jSlider1MouseEntered(evt);
+                slkilometrosMouseEntered(evt);
             }
         });
 
         nummill.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         nummill.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        jSlider2.setMaximum(500);
-        jSlider2.setValue(0);
-        jSlider2.addChangeListener(new javax.swing.event.ChangeListener() {
+        slmillas.setMaximum(500);
+        slmillas.setValue(0);
+        slmillas.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jSlider2StateChanged(evt);
+                slmillasStateChanged(evt);
             }
         });
-        jSlider2.addMouseListener(new java.awt.event.MouseAdapter() {
+        slmillas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jSlider2MouseEntered(evt);
+                slmillasMouseEntered(evt);
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton1.setText("Salir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnsalir.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnsalir.setText("Salir");
+        btnsalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnsalirActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel1.setText("Kilómetros");
+        jlbkilometros.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jlbkilometros.setText("Kilómetros");
 
-        jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel2.setText("Millas");
+        jlbmillas.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jlbmillas.setText("Millas");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,82 +103,68 @@ public class InterfazConvertidor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jSlider1, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
-                            .addComponent(jSlider2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(109, 109, 109)
-                                .addComponent(nummill, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(66, 66, 66)
-                                .addComponent(numkm, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jlbmillas)
+                            .addComponent(jlbkilometros)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(slkilometros, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
+                                .addComponent(slmillas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(numkm, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nummill, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(69, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(numkm, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addComponent(jLabel1)))
+                .addGap(56, 56, 56)
+                .addComponent(jlbkilometros)
+                .addGap(19, 19, 19)
+                .addComponent(slkilometros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(numkm, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(jlbmillas)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(nummill, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                .addComponent(slmillas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nummill, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btnsalir)
                 .addGap(15, 15, 15))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
+    private void slkilometrosStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slkilometrosStateChanged
+        kilometros();
+    }//GEN-LAST:event_slkilometrosStateChanged
 
-        if (km) {
-            this.jSlider2.setValue((int) (this.jSlider1.getValue() * 0.621371));
-        }
-        this.numkm.setText(String.valueOf(this.jSlider1.getValue()) + " km/h");
-    }//GEN-LAST:event_jSlider1StateChanged
+    private void slmillasStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slmillasStateChanged
+        millas();
+    }//GEN-LAST:event_slmillasStateChanged
 
-    private void jSlider2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider2StateChanged
-
-        if (mp) {
-            this.jSlider1.setValue((int) (this.jSlider2.getValue() * 1.60934));
-        }
-        this.nummill.setText(String.valueOf(this.jSlider2.getValue()) + " mph");
-    }//GEN-LAST:event_jSlider2StateChanged
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnsalirActionPerformed
 
-    private void jSlider1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider1MouseEntered
+    private void slkilometrosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_slkilometrosMouseEntered
         km = true;
         mp = false;
-    }//GEN-LAST:event_jSlider1MouseEntered
+    }//GEN-LAST:event_slkilometrosMouseEntered
 
-    private void jSlider2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider2MouseEntered
+    private void slmillasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_slmillasMouseEntered
         km = false;
         mp = true;
-    }//GEN-LAST:event_jSlider2MouseEntered
+    }//GEN-LAST:event_slmillasMouseEntered
 
     /**
      * @param args the command line arguments
@@ -206,12 +203,12 @@ public class InterfazConvertidor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JSlider jSlider2;
+    private javax.swing.JButton btnsalir;
+    private javax.swing.JLabel jlbkilometros;
+    private javax.swing.JLabel jlbmillas;
     private javax.swing.JLabel numkm;
     private javax.swing.JLabel nummill;
+    private javax.swing.JSlider slkilometros;
+    private javax.swing.JSlider slmillas;
     // End of variables declaration//GEN-END:variables
 }
